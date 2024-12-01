@@ -1,0 +1,107 @@
+version: "3.1"
+
+rules:
+# Règles de base pour l'interaction
+- rule: Salutation et présentation du menu
+  steps:
+  - intent: saluer
+  - action: utter_saluer
+  - action: utter_menu_principal
+
+- rule: Au revoir
+  steps:
+  - intent: au_revoir
+  - action: utter_au_revoir
+
+- rule: Information générale
+  condition:
+  - active_loop: null
+  steps:
+  - intent: info_generale_sante
+  - action: utter_info_generale
+  - action: utter_confirmation_choix
+
+# Règles pour le formulaire de conseil
+- rule: Activation du formulaire conseil culture
+  steps:
+  - intent: demander_conseil_culture
+  #- action: utter_ask_zone
+  - action: conseil_culture_form
+  - active_loop: conseil_culture_form
+
+- rule: Soumission du formulaire conseil culture
+  condition:
+  - active_loop: conseil_culture_form
+  steps:
+  - action: conseil_culture_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_suggerer_cultures
+  - action: utter_confirmation_choix
+
+# Règles pour la gestion des urgences
+- rule: Gestion problème général
+  condition:
+  - active_loop: null
+  steps:
+  - intent: probleme_culture_general
+  - action: utter_demander_precision_urgence
+
+- rule: Gestion problème spécifique
+  condition:
+  - active_loop: null
+  steps:
+  - action: utter_demander_precision_urgence
+  - intent: probleme_culture_specifique
+  - action: action_traiter_urgence
+  - action: utter_confirmation_choix
+
+# Règles pour les interruptions
+- rule: Interruption formulaire pour urgence
+  condition:
+  - active_loop: conseil_culture_form
+  steps:
+  - or:
+    - intent: probleme_culture_general
+    - intent: probleme_culture_specifique
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+  - action: action_traiter_urgence
+  - action: utter_confirmation_choix
+
+- rule: Interruption formulaire pour retour menu
+  condition:
+  - active_loop: conseil_culture_form
+  steps:
+  - intent: retour_menu
+  - action: action_deactivate_loop
+  - action: action_reset_slots
+  - action: utter_menu_principal
+
+# Règles pour la navigation
+- rule: Retour menu principal
+  condition:
+  - active_loop: null
+  steps:
+  - intent: retour_menu
+  - action: action_reset_slots
+  - action: utter_menu_principal
+
+# Règles pour les confirmations
+- rule: Confirmation positive
+  steps:
+  - intent: confirmer_choix
+  - action: action_reset_slots
+  - action: utter_remercier
+
+- rule: Confirmation négative
+  steps:
+  - intent: nier_choix
+  - action: action_reset_slots
+  - action: utter_menu_principal
+
+- rule: Presentation
+  steps:
+    - intent: presenter
+    - action: utter_presenter
