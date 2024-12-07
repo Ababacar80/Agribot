@@ -1,0 +1,622 @@
+{
+  "conversation_id": "1e8697b11c3d44b4b52ca9f35ca91155",
+  "timestamp": "2024-12-04 23:45:29.302519",
+  "slots": {
+    "zone": null,
+    "saison": null,
+    "type_sol": null,
+    "objectif_agricole": null,
+    "symptome": "oignons",
+    "type_culture": null
+  },
+  "history": [
+    {
+      "timestamp": "2024-12-04 23:45:29.301997",
+      "type": "user",
+      "message": "salut",
+      "intent": "saluer",
+      "confidence": 0.9952980875968933,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.301997",
+      "type": "bot",
+      "message": "Bienvenue ! Je peux vous aider avec des conseils sur les cultures adaptées à votre région."
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.301997",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.301997",
+      "type": "user",
+      "message": "conseils pour la culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.9977808594703674,
+      "entities": [
+        {
+          "entity": "type_conseil",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.888895571231842,
+          "value": "conseil",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.301997",
+      "type": "bot",
+      "message": "Pour quelle culture souhaitez-vous des conseils ? (oignons, tomates)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.301997",
+      "type": "user",
+      "message": "oignons",
+      "intent": "demander_conseil_specifique",
+      "confidence": 0.714066207408905,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.7244873046875,
+          "value": "oignons",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302504",
+      "type": "bot",
+      "message": "Je n'ai pas compris votre demande de conseil. Pouvez-vous reformuler ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302504",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302504",
+      "type": "user",
+      "message": "oui",
+      "intent": "confirmer_choix",
+      "confidence": 0.9992450475692749,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302504",
+      "type": "bot",
+      "message": "Je suis heureux d'avoir pu vous aider. N'hésitez pas si vous avez d'autres questions !"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "suggestion de culture",
+      "intent": "demander_suggestion_culture",
+      "confidence": 0.9998358488082886,
+      "entities": [
+        {
+          "entity": "type_suggestion",
+          "start": 0,
+          "end": 10,
+          "confidence_entity": 0.9974797368049622,
+          "value": "suggestion",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Dans quelle zone du Sénégal souhaitez-vous cultiver ? (Par exemple : Ziguinchor, Dakar, Saint-Louis, Fouta, Kaolack)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "dakar",
+      "intent": "specifier_zone",
+      "confidence": 0.9991244673728943,
+      "entities": [
+        {
+          "entity": "zone",
+          "start": 0,
+          "end": 5,
+          "confidence_entity": 0.9980171918869019,
+          "value": "dakar",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": " Pour quelle saison souhaitez-vous cultiver ? (saison des pluies ou saison sèche)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "saison des pluies",
+      "intent": "specifier_saison",
+      "confidence": 0.978095531463623,
+      "entities": [
+        {
+          "entity": "saison",
+          "start": 0,
+          "end": 17,
+          "confidence_entity": 0.8,
+          "value": "saison des pluies",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": " Pouvez-vous me préciser le type de votre sol ? (argileux/sableux)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "sableux",
+      "intent": "specifier_type_sol",
+      "confidence": 0.995594322681427,
+      "entities": [
+        {
+          "entity": "type_sol",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.9951726794242859,
+          "value": "sableux",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": " Quel est votre objectif ? (cultures vivrières  ou cultures de rente)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "vivriere",
+      "intent": "specifier_objectif",
+      "confidence": 0.9608069062232971,
+      "entities": [
+        {
+          "entity": "objectif_agricole",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.7172961235046387,
+          "value": "vivriere",
+          "extractor": "DIETClassifier"
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je n'ai pas compris votre demande de suggestion. Pouvez-vous reformuler ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9947224855422974,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "probleme avec les cultures",
+      "intent": "probleme_culture_general",
+      "confidence": 0.9926549196243286,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Pouvez-vous me décrire les symptômes que vous observez sur vos cultures ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "mes tomates ont des taches noires",
+      "intent": "probleme_culture_specifique",
+      "confidence": 0.9996947050094604,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 4,
+          "end": 33,
+          "confidence_entity": 0.7005568146705627,
+          "value": "tomate_taches_noires",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Pour ce problème sur vos tomates:\n\nDescription: Taches noires sur les feuilles ou les fruits\nNiveau de gravité: modérée\n\n\nSolutions recommandées:\n• Retirer les plants infectés\n• Traitement fongicide\n• Améliorer l'aération\n• Réduire l'irrigation\n\nConseils de prévention générale:\n• Utiliser des variétés résistantes\n• Rotation des cultures\n• Éviter l'excès d'humidité\n• Désinfection des outils\n"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9947224855422974,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "conseils pour la culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.9977808594703674,
+      "entities": [
+        {
+          "entity": "type_conseil",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.888895571231842,
+          "value": "conseil",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Pour quelle culture souhaitez-vous des conseils ? (oignons, tomates)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "oignons",
+      "intent": "demander_conseil_specifique",
+      "confidence": 0.714066207408905,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.7244873046875,
+          "value": "oignons",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Pour quelle culture souhaitez-vous des conseils ? (tomates, oignons...)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9947224855422974,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "suggestion de culture",
+      "intent": "demander_suggestion_culture",
+      "confidence": 0.9998358488082886,
+      "entities": [
+        {
+          "entity": "type_suggestion",
+          "start": 0,
+          "end": 10,
+          "confidence_entity": 0.9974797368049622,
+          "value": "suggestion",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Dans quelle zone du Sénégal souhaitez-vous cultiver ? (Par exemple : Ziguinchor, Dakar, Saint-Louis, Fouta, Kaolack)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "dakar",
+      "intent": "specifier_zone",
+      "confidence": 0.9991244673728943,
+      "entities": [
+        {
+          "entity": "zone",
+          "start": 0,
+          "end": 5,
+          "confidence_entity": 0.9980171918869019,
+          "value": "dakar",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": " Quelle saison vous intéresse ? (saison des pluies/saison sèche)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "saison des pluies",
+      "intent": "specifier_saison",
+      "confidence": 0.978095531463623,
+      "entities": [
+        {
+          "entity": "saison",
+          "start": 0,
+          "end": 17,
+          "confidence_entity": 0.8,
+          "value": "saison des pluies",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": " Quel est le type de votre sol ? (argileux, sableux)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "sableux",
+      "intent": "specifier_type_sol",
+      "confidence": 0.995594322681427,
+      "entities": [
+        {
+          "entity": "type_sol",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.9951726794242859,
+          "value": "sableux",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": " Quel est votre objectif ? (cultures vivrières  ou cultures de rente)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "vivriere",
+      "intent": "specifier_objectif",
+      "confidence": 0.9608069062232971,
+      "entities": [
+        {
+          "entity": "objectif_agricole",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.7172961235046387,
+          "value": "vivriere",
+          "extractor": "DIETClassifier"
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je n'ai pas bien compris les informations suivantes : zone. Pouvez-vous les préciser ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9947224855422974,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "conseils pour la culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.9977808594703674,
+      "entities": [
+        {
+          "entity": "type_conseil",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.888895571231842,
+          "value": "conseil",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Sur quelle culture avez-vous besoin d'aide ? (oignons, tomates)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "oignons",
+      "intent": "demander_conseil_specifique",
+      "confidence": 0.714066207408905,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.7244873046875,
+          "value": "oignons",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Pour quelle culture souhaitez-vous des conseils ? Je peux vous aider avec : tomates, oignons"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9947224855422974,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "conseils pour la culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.9977808594703674,
+      "entities": [
+        {
+          "entity": "type_conseil",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.888895571231842,
+          "value": "conseil",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Quelle culture vous intéresse ? (oignons, tomates)"
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "user",
+      "message": "oignons",
+      "intent": "demander_conseil_specifique",
+      "confidence": 0.714066207408905,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.7244873046875,
+          "value": "oignons",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 23:45:29.302519",
+      "type": "bot",
+      "message": "Pour quelle culture souhaitez-vous des conseils ? Je peux vous aider avec : tomates, oignons"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "conversation_id": "ef3119a681794184a86ef62468f145a4",
+  "timestamp": "2024-12-03 23:54:19.686287",
+  "slots": {
+    "zone": null,
+    "saison": null,
+    "type_sol": null,
+    "objectif_agricole": null,
+    "symptome": "tomate_taches_noires",
+    "type_culture": null
+  },
+  "history": [
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "saluut",
+      "intent": "saluer",
+      "confidence": 0.9653622508049011,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Bonjour ! Je suis votre assistant agricole."
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Conseils de culture \n- Probleme avec les cultures \n- Infos sur les cultures \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "conseils de culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.8310023546218872,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Quelle est votre zone de culture ? (Ziguinchor, Dakar, Saint-Louis, Fouta, Kaolack)"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "dakar",
+      "intent": "specifier_zone",
+      "confidence": 0.9995984435081482,
+      "entities": [
+        {
+          "entity": "zone",
+          "start": 0,
+          "end": 5,
+          "confidence_entity": 0.9968448877334595,
+          "value": "dakar",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": " Pour quelle saison souhaitez-vous cultiver ? (saison des pluies ou saison sèche)"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "saison des pluies",
+      "intent": "specifier_saison",
+      "confidence": 0.9943476319313049,
+      "entities": [
+        {
+          "entity": "saison",
+          "start": 0,
+          "end": 17,
+          "confidence_entity": 0.5619794726371765,
+          "value": "saison des pluies",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": " Pouvez-vous me préciser le type de votre sol ? (argileux/sableux)"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "sableux",
+      "intent": "specifier_type_sol",
+      "confidence": 0.9967548251152039,
+      "entities": [
+        {
+          "entity": "type_sol",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.9959542751312256,
+          "value": "sableux",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": " Souhaitez-vous faire des cultures vivrières ou des cultures de rente ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "vivriere",
+      "intent": "specifier_objectif",
+      "confidence": 0.9807785749435425,
+      "entities": [
+        {
+          "entity": "objectif_agricole",
+          "start": 0,
+          "end": 8,
+          "confidence_entity": 0.8017672896385193,
+          "value": "vivriere",
+          "extractor": "DIETClassifier"
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Pour votre zone dakar en saison des pluies avec un sol sableux, voici les cultures recommandées pour cultures vivrières:\n\n🌱 Niébé:\n• Période de plantation: Début des pluies (juin-juillet)\n• Durée du cycle: 60-90 jours\n• Besoins en eau: Faibles (300-500 mm/cycle)\n• Conseils de culture:\n  - Résistant à la sécheresse\n  - Adapté aux sols sableux\n  - Rotation avec céréales\n  - Protection contre les insectes\n\n🌱 Mil:\n• Période de plantation: Mi-juin\n• Durée du cycle: 90-120 jours\n• Besoins en eau: Modérés (450-650 mm/cycle)\n• Conseils de culture:\n  - Semis peu profond\n  - Démariage\n  - Protection oiseaux\n  - Rotation des cultures\n\n🌱 Manioc:\n• Période de plantation: Début des pluies\n• Durée du cycle: 8-12 mois\n• Besoins en eau: Modérés (500-700 mm/cycle)\n• Conseils de culture:\n  - Boutures saines\n  - Buttage\n  - Désherbage régulier\n  - Sol bien drainé\n\n"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9979362487792969,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Conseils de culture \n- Probleme avec les cultures \n- Infos sur les cultures \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "infos sur les cultures",
+      "intent": "probleme_culture_general",
+      "confidence": 0.9938528537750244,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Pouvez-vous me décrire les symptômes que vous observez sur vos cultures ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "mes tomates jaunissent",
+      "intent": "probleme_culture_specifique",
+      "confidence": 0.9995903372764587,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 4,
+          "end": 22,
+          "confidence_entity": 0.7086924314498901,
+          "value": "tomates jaunissent",
+          "extractor": "DIETClassifier"
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Je n'ai pas d'informations sur ce problème spécifique. Je vous conseille de contacter un expert pour un diagnostic précis."
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9979362487792969,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Conseils de culture \n- Probleme avec les cultures \n- Infos sur les cultures \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "probleme avec cultures",
+      "intent": "probleme_culture_general",
+      "confidence": 0.993399977684021,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Pouvez-vous me décrire les symptômes que vous observez sur vos cultures ?"
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "user",
+      "message": "mes tomates ont des taches noires",
+      "intent": "probleme_culture_specifique",
+      "confidence": 0.9998132586479187,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 4,
+          "end": 33,
+          "confidence_entity": 0.7781280875205994,
+          "value": "tomate_taches_noires",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-03 23:54:19.686287",
+      "type": "bot",
+      "message": "Pour ce problème sur vos tomates:\n\nDescription: Taches noires sur les feuilles ou les fruits\nNiveau de gravité: modérée\n\n\nSolutions recommandées:\n• Retirer les plants infectés\n• Traitement fongicide\n• Améliorer l'aération\n• Réduire l'irrigation\n\nConseils de prévention générale:\n• Utiliser des variétés résistantes\n• Rotation des cultures\n• Éviter l'excès d'humidité\n• Désinfection des outils\n"
+    }
+  ]
+}

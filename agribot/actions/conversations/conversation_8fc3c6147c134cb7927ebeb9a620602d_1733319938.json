@@ -1,0 +1,126 @@
+{
+  "conversation_id": "8fc3c6147c134cb7927ebeb9a620602d",
+  "timestamp": "2024-12-04 13:45:38.207812",
+  "slots": {
+    "zone": null,
+    "saison": null,
+    "type_sol": null,
+    "objectif_agricole": null,
+    "symptome": "oignons",
+    "type_culture": null
+  },
+  "history": [
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "user",
+      "message": "salut",
+      "intent": "saluer",
+      "confidence": 0.9825530052185059,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Bienvenue ! Je peux vous aider avec des conseils sur les cultures adaptées à votre région."
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "user",
+      "message": "conseils pour la culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.9990247488021851,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Pouvez-vous me dire quelle culture vous voulez cultiver ? (oignons, tomates)"
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "user",
+      "message": "tomates",
+      "intent": "nlu_fallback",
+      "confidence": 0.7,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.700957715511322,
+          "value": "tomates",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Je n'ai pas d'informations sur ce problème spécifique. Je vous conseille de contacter un expert pour un diagnostic précis."
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Ces informations vous ont-elles été utiles ?"
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "user",
+      "message": "non",
+      "intent": "nier_choix",
+      "confidence": 0.9953202605247498,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Je peux vous aider avec :\n- Suggestion de culture \n- Probleme avec les cultures \n- Conseils pour la culture \nQue souhaitez-vous ?"
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "user",
+      "message": "aide-moi avec la culture",
+      "intent": "demander_conseil_culture",
+      "confidence": 0.9993799924850464,
+      "entities": []
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Pour quelle culture souhaitez-vous des conseils ? (oignons, tomates)"
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "user",
+      "message": "oignons",
+      "intent": "nlu_fallback",
+      "confidence": 0.7,
+      "entities": [
+        {
+          "entity": "symptome",
+          "start": 0,
+          "end": 7,
+          "confidence_entity": 0.7640659809112549,
+          "value": "oignons",
+          "extractor": "DIETClassifier",
+          "processors": [
+            "EntitySynonymMapper"
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2024-12-04 13:45:38.207812",
+      "type": "bot",
+      "message": "Je n'ai pas d'informations sur ce problème spécifique. Je vous conseille de contacter un expert pour un diagnostic précis."
+    }
+  ]
+}
